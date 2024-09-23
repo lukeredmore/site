@@ -1,0 +1,99 @@
+html {
+  font-weight: 500;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: underline; 
+}
+
+p {
+  margin-top: 1.5rem;
+  line-height: 1.5;
+}
+
+.layout {
+  .header {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+
+    .left {
+      font-size: 2em;
+      font-weight: 1000;
+    }
+
+    .right {
+      display: inline-flex;
+      gap: 2em;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .container {
+    
+    border-top: 1px solid black;
+    & > div {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: justify;
+  text-justify: inter-word;
+  .about {
+    p {
+      &:first-child {
+        margin-top: 3rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .me {
+    width: 400px;
+    margin: auto;
+
+  }
+
+  .closing {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+}
+
+.projects {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.5;
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  h3 {
+    margin-bottom: 0.3rem;
+    margin-top: 1.5rem;
+  }
+}
